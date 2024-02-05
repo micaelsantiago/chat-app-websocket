@@ -1,0 +1,30 @@
+.message_container {
+  height: 10%;
+}
+
+#chat_container {
+  max-height: 90%;
+  min-height: 90%;
+  overflow: hidden;
+}
+
+#chat_messages {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.messager_user {
+  height: auto;
+  text-align: left;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.messager_user p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.messager_user.actual_user {
+  text-align: right;
+}

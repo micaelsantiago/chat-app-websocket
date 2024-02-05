@@ -13,11 +13,10 @@ const io = new Server(server);
 app.use(express.static(join(__dirname, '..', 'public')));
 
 io.on('connection', socket => {
-  console.log('User: ', socket.id);
-
-  socket.on('disconnect', () => {
-    console.log('User disconnected: ', socket.id);
+  socket.on('message', (msg) => {
+    socket.broadcast.emit('message', msg);
   });
+
 })
 
 server.listen(PORT, () => {
